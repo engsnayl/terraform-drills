@@ -28,6 +28,15 @@ resource "aws_security_group" "web" {
   description = "Day 1 drill security group"
 
   ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description = "HTTP"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -49,6 +58,7 @@ resource "aws_security_group" "web" {
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.amazon_Linux.id
   instance_type          = "t2.micro"
+  key_name               = "drill-key"
   vpc_security_group_ids = [aws_security_group.web.id]
 
   user_data = <<-EOF
