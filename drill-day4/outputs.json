@@ -1,0 +1,32 @@
+{
+  "instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-093f4b571165cae16"
+  },
+  "instance_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "34.242.85.236"
+  },
+  "ssh_command": {
+    "sensitive": false,
+    "type": "string",
+    "value": "ssh -i ~/.ssh/id_rsa ec2-user@34.242.85.236"
+  },
+  "ssh_sg_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-0a9940c9bbd46dcef"
+  },
+  "web_sg_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "sg-069f5dd793ecf78a9"
+  },
+  "web_url": {
+    "sensitive": false,
+    "type": "string",
+    "value": "http://34.242.85.236"
+  }
+}
